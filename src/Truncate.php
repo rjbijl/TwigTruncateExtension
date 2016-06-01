@@ -21,6 +21,13 @@ class Truncate extends Twig_Extension
                     'is_safe' => array('html')
                 )
             ),
+            new Twig_SimpleFilter(
+                'truncate_html',
+                array($this, 'truncate'),
+                array(
+                    'is_safe' => array('html')
+                )
+            ),
         );
     }
 
